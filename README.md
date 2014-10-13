@@ -1,6 +1,8 @@
 monotone-convex-hull-2d
 =======================
-Computes the convex hull of a set of points in the plane in O(n log(n)) time using the Monotone chain algorithm
+Computes the convex hull of a set of points in the plane in O(n log(n)) time using the Monotone chain algorithm.
+
+* [Demo Link](https://mikolalysenko.github.io/monotone-convex-hull-2d/visualizer/index.html)
 
 # Example
 
