@@ -23,5 +23,12 @@ tape('convex-hull-2d', function(t) {
   }
   t.deepEqual(hull(h), [0,3,1,2])
 
+  //Degenerate cases
+  t.deepEqual(hull([[0,0]]), [0])
+  t.deepEqual(hull([]), [])
+  t.deepEqual(hull([[0,0], [1,1]]), [0,1])
+  t.deepEqual(hull([[0,0], [0,0]]), [0])
+
+
   t.end()
 })

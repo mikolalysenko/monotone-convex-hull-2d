@@ -5,11 +5,22 @@ module.exports = monotoneConvexHull2D
 var orient = require('robust-orientation')[3]
 
 function monotoneConvexHull2D(points) {
-  if(points.length === 0) {
-    return []
-  }
-
   var n = points.length
+
+  if(n < 3) {
+    var result = new Array(n)
+    for(var i=0; i<n; ++i) {
+      result[i] = i
+    }
+
+    if(n === 2 &&
+       points[0][0] === points[1][0] &&
+       points[0][1] === points[1][1]) {
+      return [0]
+    }
+
+    return result
+  }
 
   //Sort point indices along x-axis
   var sorted = new Array(n)
@@ -43,7 +54,7 @@ function monotoneConvexHull2D(points) {
     }
     lower.push(idx)
 
-    //Insert into uppwer list
+    //Insert into upper list
     m = upper.length
     while(m > 1 && orient(
         points[upper[m-2]], 

@@ -8,7 +8,7 @@
     "test": "test"
   },
   "dependencies": {
-    "robust-orientation": "^1.1.3",
+    "robust-orientation": "^1.1.3"
   },
   "devDependencies": {
     "tape": "^3.0.0"
